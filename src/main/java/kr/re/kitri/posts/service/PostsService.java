@@ -7,7 +7,7 @@ import java.util.List;
 public interface PostsService {
 
     List<Post> viewAllPosts();
-    String viewPostByPostId(long postId);
+    Post viewPostByPostId(long postId);
     void removePostByPostId(long postId);
 
 }

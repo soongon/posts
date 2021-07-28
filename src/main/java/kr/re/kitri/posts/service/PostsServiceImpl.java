@@ -20,8 +20,8 @@ public class PostsServiceImpl implements PostsService {
     }
 
     @Override
-    public String viewPostByPostId(long postId) {
-        return null;
+    public Post viewPostByPostId(long postId) {
+        return postsRepository.selectPostByPostId(postId);
     }
 
     @Override
