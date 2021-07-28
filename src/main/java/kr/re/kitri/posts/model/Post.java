@@ -1,5 +1,7 @@
 package kr.re.kitri.posts.model;
 
+import java.io.Serializable;
+
 public class Post {
     private long id;
     private String title;
