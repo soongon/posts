@@ -3,9 +3,7 @@ package kr.re.kitri.posts.controller;
 import kr.re.kitri.posts.model.Post;
 import kr.re.kitri.posts.service.PostsService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -23,5 +21,10 @@ public class PostsController {
     @GetMapping("/posts/{postId}") // /posts/3
     public Post getPostByPostId(@PathVariable long postId) {
         return postsService.viewPostByPostId(postId);
+    }
+
+    @PostMapping("/posts")
+    public Post registPost(@RequestBody Post post) {
+        return postsService.setPost(post);
     }
 }

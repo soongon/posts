@@ -9,5 +9,5 @@ public interface PostsService {
     List<Post> viewAllPosts();
     Post viewPostByPostId(long postId);
     void removePostByPostId(long postId);
-
+    Post setPost(Post post);
 }

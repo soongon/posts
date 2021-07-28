@@ -28,4 +28,9 @@ public class PostsServiceImpl implements PostsService {
     public void removePostByPostId(long postId) {
 
     }
+
+    @Override
+    public Post setPost(Post post) {
+        return postsRepository.insertPost(post);
+    }
 }

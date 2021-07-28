@@ -24,4 +24,9 @@ public class PostsRepository {
     public Post selectPostByPostId(long postId) {
         return new Post(postId, "제목무", "냉무", 100);
     }
+
+    public Post insertPost(Post post) {
+        System.out.println("insert ok with .. " + post);
+        return post;
+    }
 }
