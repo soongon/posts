@@ -29,4 +29,8 @@ public class PostsRepository {
         System.out.println("insert ok with .. " + post);
         return post;
     }
+
+    public void deletePostByPostId(long postId) {
+        System.out.println("delete ok postId is " + postId);
+    }
 }

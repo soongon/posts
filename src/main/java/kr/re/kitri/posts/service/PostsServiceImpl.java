@@ -26,7 +26,7 @@ public class PostsServiceImpl implements PostsService {
 
     @Override
     public void removePostByPostId(long postId) {
-
+        postsRepository.deletePostByPostId(postId);
     }
 
     @Override

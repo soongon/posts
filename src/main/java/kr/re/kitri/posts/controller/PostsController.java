@@ -27,4 +27,9 @@ public class PostsController {
     public Post registPost(@RequestBody Post post) {
         return postsService.setPost(post);
     }
+
+    @DeleteMapping("/posts/{postId}")
+    public void removePostByPostId(@PathVariable long postId) {
+        postsService.removePostByPostId(postId);
+    }
 }
