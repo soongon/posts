@@ -13,24 +13,17 @@ public class PostsServiceImpl implements PostsService {
     @Autowired
     private PostsRepository postsRepository;
 
-    @Override
-    public List<Post> viewAllPosts() {
+    @Override public List<Post> viewAllPosts() {
         // DB에서 글을 가지고 온다.
         return postsRepository.selectPostsAll();
     }
-
-    @Override
-    public Post viewPostByPostId(long postId) {
+    @Override public Post viewPostByPostId(long postId) {
         return postsRepository.selectPostByPostId(postId);
     }
-
-    @Override
-    public void removePostByPostId(long postId) {
+    @Override public void removePostByPostId(long postId) {
         postsRepository.deletePostByPostId(postId);
     }
-
-    @Override
-    public Post setPost(Post post) {
+    @Override public Post setPost(Post post) {
         return postsRepository.insertPost(post);
     }
 }
