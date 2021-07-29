@@ -12,7 +12,6 @@
         FROM    posts
     </select>
     <select id="selectPostByPostId"
-            parameterType="java.lang.Long"
             resultType="kr.re.kitri.posts.model.Post">
         SELECT  id,
                 title,
@@ -25,7 +24,10 @@
         insert into posts (id, title, body, likes)
         values (#{id}, #{title}, #{body}, #{likes})
     </insert>
-    <delete id="" parameterType="">
-
+    <delete id="deletePostByPostId">
+        delete
+        from    posts
+        where   id = #{postId}
     </delete>
+
 </mapper>
