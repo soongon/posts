@@ -24,6 +24,7 @@ public class PostsServiceImpl implements PostsService {
         postsRepository.deletePostByPostId(postId);
     }
     @Override public Post setPost(Post post) {
-        return postsRepository.insertPost(post);
+        postsRepository.insertPost(post);
+        return post;
     }
 }

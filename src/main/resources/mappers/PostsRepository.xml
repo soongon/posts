@@ -4,4 +4,28 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="kr.re.kitri.posts.dao.PostsRepository">
 
+    <select id="selectPostsAll" resultType="kr.re.kitri.posts.model.Post">
+        SELECT  id,
+                title,
+                body,
+                likes
+        FROM    posts
+    </select>
+    <select id="selectPostByPostId"
+            parameterType="java.lang.Long"
+            resultType="kr.re.kitri.posts.model.Post">
+        SELECT  id,
+                title,
+                body,
+                likes
+        FROM    posts
+        WHERE   id = #{postId}
+    </select>
+    <insert id="insertPost" parameterType="kr.re.kitri.posts.model.Post">
+        insert into posts (id, title, body, likes)
+        values (#{id}, #{title}, #{body}, #{likes})
+    </insert>
+    <delete id="" parameterType="">
+
+    </delete>
 </mapper>
