@@ -17,7 +17,7 @@
                 title,
                 body,
                 likes
-        FROM    postssss
+        FROM    posts
         WHERE   id = #{postId}
     </select>
     <insert id="insertPost" parameterType="kr.re.kitri.posts.model.Post">
