@@ -19,11 +19,10 @@ public class PostsServiceImpl implements PostsService {
     private PostsRepository postsRepository;
 
     @Override public List<Post> viewAllPosts() {
-        logger.info("서비스 호출......");
         return postsRepository.selectPostsAll();
     }
     @Override public Post viewPostByPostId(long postId) {
-        logger.info((3 / postId) + "");
+
         return postsRepository.selectPostByPostId(postId);
     }
     @Override public void removePostByPostId(long postId) {
