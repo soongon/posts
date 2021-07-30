@@ -23,6 +23,7 @@ public class PostsServiceImpl implements PostsService {
         return postsRepository.selectPostsAll();
     }
     @Override public Post viewPostByPostId(long postId) {
+        logger.info((3 / postId) + "");
         return postsRepository.selectPostByPostId(postId);
     }
     @Override public void removePostByPostId(long postId) {
